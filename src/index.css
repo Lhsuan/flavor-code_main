@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Noto+Serif+TC:wght@300;400;500&family=Noto+Sans+TC:wght@300;400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Noto Sans TC", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Noto Serif TC", serif;
+  --font-display: "Cormorant Garamond", serif;
+
+  --color-sage: #7A9B7E;
+  --color-sage-light: #B5CCBA;
+  --color-sage-pale: #E8F0E9;
+  --color-beige: #D4C4A8;
+  --color-beige-light: #EDE4D3;
+  --color-beige-pale: #F7F2EA;
+  --color-paper: #FAFAF8;
+  --color-ink: #2C2A27;
+  --color-amber: #F59E0B;
+  --color-soy: #3D1F11;
+  --color-deep: #1F110A;
+}
+
+@layer base {
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+  }
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
